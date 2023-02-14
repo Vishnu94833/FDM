@@ -1,0 +1,18 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" opened class="example-sidenav col-md-2" [fixedInViewport]="options.value.fixed"
+    [fixedTopGap]="options.value.top" [fixedBottomGap]="options.value.bottom">
+    <div class="fdm-nav-logo">
+      <a href="/">
+        <img src="assets/logoipsum.svg" alt="Logo">
+      </a>
+    </div>
+    <mat-list role="list">
+      <mat-list-item *ngFor="let nav of navList" [routerLink]="nav.link" routerLinkActive="active-nav" role="listitem"
+      >{{nav.option}}</mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="col-md" [formGroup]="options">
+      <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
