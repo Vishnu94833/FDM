@@ -9,6 +9,7 @@
     <mat-list role="list">
       <mat-list-item *ngFor="let nav of navList" [routerLink]="nav.link" routerLinkActive="active-nav" role="listitem"
       >{{nav.option}}</mat-list-item>
+      <mat-list-item (click)="logout()">Logout</mat-list-item>
     </mat-list>
   </mat-sidenav>
 

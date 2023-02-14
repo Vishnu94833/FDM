@@ -35,7 +35,7 @@ export class AppComponent implements OnInit
 
   public ngOnInit() : void
   {
-    setTimeout(_ =>
+    setTimeout(() =>
       {
         this.isLoading = false;
       }, 2000);

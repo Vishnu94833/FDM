@@ -20,17 +20,17 @@ export class PageLayoutComponent implements OnInit
   navList = [
     {
       option:"Home",
-      link:"/home"
+      link:"/app/home"
     },
     {
       option:"About",
-      link:"/about"
+      link:"/app/about"
     },
     {
       option:"Instructions",
-      link:"/instructions"
+      link:"/app/instructions"
     }
-  ]
+  ];
 
   constructor(private _formBuilder: FormBuilder, private router:Router) {}
   
@@ -41,13 +41,15 @@ export class PageLayoutComponent implements OnInit
   // -------------------------------------------------------------------------------
   public ngOnInit() : void
   {
-
   }
 
   // -------------------------------------------------------------------------------
   // NOTE Actions ------------------------------------------------------------------
   // -------------------------------------------------------------------------------
-
+  logout(){
+    localStorage.removeItem('loggedIn');
+    this.router.navigate(['/auth/login']);
+  }
   // -------------------------------------------------------------------------------
   // NOTE Computed props -----------------------------------------------------------
   // -------------------------------------------------------------------------------

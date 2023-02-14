@@ -31,6 +31,7 @@ export class AppService extends MainService
 
   public async authenticate(email : string, password : string) : Promise<boolean>
   {
+    localStorage.setItem("loggedIn", 'true');
     return Promise.resolve(true);
 
     // StorageHelper.removeToken();

@@ -29,6 +29,7 @@ import { AppComponent }         from './app.component';
 
 // Factories
 import { appInitFactory }       from '@factories/app-init.factory';
+// import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   imports: [

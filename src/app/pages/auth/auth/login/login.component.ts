@@ -80,7 +80,7 @@ export class LoginComponent
       return;
 
     // NOTE Redirect to home
-    this.router.navigate(['/home']);
+    this.router.navigate(['/app/home']);
   }
 
   // -------------------------------------------------------------------------------

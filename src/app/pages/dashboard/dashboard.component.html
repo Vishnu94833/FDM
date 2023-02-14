@@ -1,0 +1,8 @@
+<app-page-layout>
+    <div class="container my-3">
+        <app-progress-bar *ngIf="isLoading"></app-progress-bar>
+        <ng-container *ngIf="!isLoading">
+                <router-outlet></router-outlet>
+        </ng-container>
+    </div>
+</app-page-layout>
